@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Completo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; }
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+        header { grid-area: header; background: #333; color: white; padding: 15px; text-align: center; }
+        aside { grid-area: sidebar; background: #ccc; padding: 15px; }
+        main { grid-area: main; background: #f0f0f0; padding: 15px; }
+        footer { grid-area: footer; background: #333; color: white; padding: 15px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Encabezado</header>
+        <aside>Barra Lateral</aside>
+        <main>Contenido Principal</main>
+        <footer>Pie de Página</footer>
+    </div>
+</body>
+</html>
